@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Últimas noticias y artículos de los Tigres del Licey." />
+  <meta name="keywords" content="Tigres del Licey noticias, béisbol dominicano, LIDOM noticias" />
+  <meta name="author" content="Tigres del Licey" />
+  <meta name="robots" content="index, follow" />
+  <title>Noticias Tigres del Licey</title>
+<link rel="icon" type="image/svg+xml" href="img/tigresdelliceyicono-removebg-preview.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="img/tigresdelliceyicono-removebg-preview.png" alt="logo" width="90" class="me-2" />
+      <div><span class="nombre-marca">TIGRES</span><br><span class="subtitulo-marca">DEL LICEY</span></div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <i class="bi bi-list text-white fs-2"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-fill me-1"></i>Inicio</a></li>
+        <li class="nav-item"><a class="nav-link active" href="noticias.html"><i class="bi bi-newspaper me-1"></i>Noticias</a></li>
+        <li class="nav-item"><a class="nav-link" href="enlaces.html"><i class="bi bi-globe me-1"></i>Multimedia</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html"><i class="bi bi-envelope-fill me-1"></i>Contacto</a></li>
+        <li class="nav-item">
+          <button class="btn btn-outline-light btn-sm ms-lg-3" id="darkToggle" onclick="toggleDark()">
+            <i class="bi bi-moon-fill" id="darkIcon"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<div class="hero-pagina">
+  <div class="container">
+    <h1><i class="bi bi-newspaper me-3"></i>Noticias y Artículos</h1>
+    <p>Mantente al día con todo lo que pasa en el mundo azul</p>
+  </div>
+</div>
+
+<main class="container py-5">
+
+  <!-- Featured News -->
+  <section class="mb-5">
+    <span class="etiqueta-seccion">Destacado</span>
+    <h2 class="titulo-seccion">Última Hora</h2>
+    <div class="row g-4">
+
+      <div class="col-lg-8">
+        <div class="tarjeta-noticia noticia-destacada tarjeta-hover">
+          <div class="insignia-noticia"> Noticia Principal</div>
+          <div class="fecha-noticia"><i class="bi bi-calendar3 me-1"></i>Enero 2025</div> 
+          <h3>Tigres del Licey se Proclaman Campeones de la Temporada 2023-2024</h3>
+          <p>En una emocionante final que mantuvo a los fanáticos en vilo durante siete juegos, los <strong>Tigres del Licey</strong> conquistaron su campeonato número 23 al vencer a los Leones del Escogido en el último juego de la serie final.</p>
+          <p>El pitcheo dominante y la ofensiva explosiva del equipo fue la clave del triunfo. El manager destacó el esfuerzo colectivo de toda la nómina durante la temporada.</p>
+          <button class="btn boton-dorado mt-2" onclick="showAlert('¡Viva el Licey Campeón!', 'success')">
+            Leer Artículo Completo <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="tarjeta-noticia tarjeta-hover h-100">
+          <div class="fecha-noticia"><i class="bi bi-calendar3 me-1"></i>Diciembre 2024</div>
+          <h4>El Licey Firma Tres Prospectos de Primer Nivel para la Próxima Temporada</h4>
+          <p>La directiva anunció la incorporación de tres jóvenes talentos dominicanos que reforzarán el roster para la próxima campaña beisbolística.</p>
+          <button class="btn boton-contorno-dorado btn-sm mt-2" onclick="showAlert('Noticia cargando...', 'info')">Ver más</button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="tarjeta-noticia tarjeta-hover">
+          <div class="fecha-noticia"><i class="bi bi-calendar3 me-1"></i>Noviembre 2024</div>
+          <h5>Estadio Quisqueya Recibe Premio Regional</h5>
+          <p>El estadio fue reconocido como una de las mejores instalaciones deportivas del Caribe por su modernización y atención al fanático.</p>
+          <button class="btn boton-contorno-dorado btn-sm mt-2" onclick="showAlert('Noticia cargando...', 'info')">Ver más</button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="tarjeta-noticia tarjeta-hover">
+          <div class="fecha-noticia"><i class="bi bi-calendar3 me-1"></i>Octubre 2024</div>
+          <h5>Programa Juventud Tigre Impacta 500 Niños</h5>
+          <p>La academia de béisbol del Licey cerró su temporada con un récord de participación juvenil, formando a los futuros talentos dominicanos.</p>
+          <button class="btn boton-contorno-dorado btn-sm mt-2" onclick="showAlert('Noticia cargando...', 'info')">Ver más</button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="tarjeta-noticia tarjeta-hover">
+          <div class="fecha-noticia"><i class="bi bi-calendar3 me-1"></i>Septiembre 2024</div>
+          <h5>Ex Tigres Brillan en las Grandes Ligas</h5>
+          <p>Varios jugadores formados en el Licey tuvieron temporadas destacadas en MLB, llevando el nombre dominicano a lo más alto del béisbol mundial.</p>
+          <button class="btn boton-contorno-dorado btn-sm mt-2" onclick="showAlert('Noticia cargando...', 'info')">Ver más</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Article Section -->
+  <section class="mb-5">
+    <span class="etiqueta-seccion">Artículo</span>
+    <h2 class="titulo-seccion">Historia: El ADN Ganador del Licey</h2>
+    <div class="row">
+      <div class="col-lg-8">
+        <article class="cuerpo-articulo">
+          <h3>¿Por Qué el Licey Siempre Gana?</h3>
+          <p>Desde su fundación en 1907, los Tigres del Licey han cultivado una cultura de victoria que va más allá del béisbol. Es un estilo de vida, una filosofía transmitida de generación en generación entre los fanáticos del equipo.</p>
+          <h4>La Base: Desarrollo de Talento</h4>
+          <p>El Licey fue pionero en crear academias de béisbol en la República Dominicana. Su programa de desarrollo juvenil ha producido docenas de grandes ligas, siendo uno de los exportadores de talento más importantes del Caribe.</p>
+          <h4>La Fanática: El Jugador Número 26</h4>
+          <p>Los fanáticos del Licey son reconocidos como los más apasionados e influyentes del béisbol dominicano. Su presencia en el Estadio Quisqueya es considerada una ventaja real para el equipo, al punto que los propios jugadores los llaman "el jugador número 26".</p>
+          <h4>Números que Hablan</h4>
+          <p>Con <strong>23 campeonatos nacionales</strong> y <strong>8 Series del Caribe</strong>, el Licey tiene más títulos que cualquier otro equipo de béisbol caribeño. Estos números no son casualidad: son el resultado de una organización profesional y una mística ganadora inquebrantable.</p>
+          <blockquote class="cita-licey">"Jugar para el Licey es la mayor responsabilidad que puede tener un pelotero dominicano." – Leyenda anónima del equipo</blockquote>
+        </article>
+      </div>
+      <div class="col-lg-4">
+        <div class="tarjeta-lateral">
+          <h5 class="titulo-lateral"><i class="bi bi-bar-chart-fill text-gold me-2"></i>Estadísticas Históricas</h5>
+          <div class="fila-estadistica"><span>Campeonatos LIDOM</span><strong>23</strong></div>
+          <div class="fila-estadistica"><span>Series del Caribe</span><strong>8</strong></div>
+          <div class="fila-estadistica"><span>Años de historia</span><strong>118+</strong></div>
+          <div class="fila-estadistica"><span>Grandes Ligas producidos</span><strong>100+</strong></div>
+          <div class="fila-estadistica"><span>Fanáticos activos</span><strong>+1M</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="pie-pagina">
+  <div class="container py-4 text-center derechos-pie">
+    © 2025 Tigres del Licey · <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Políticas de Privacidad</a>
+  </div>
+</footer>
+
+<!-- Privacy Modal -->
+<div class="modal fade" id="privacyModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
+    <div class="modal-content modal-licey-es">
+      <div class="modal-header">
+        <h5 class="modal-title"><i class="bi bi-shield-lock-fill text-gold me-2"></i>Políticas de Privacidad</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Consulta nuestras políticas de privacidad completas en la página principal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn boton-dorado" data-bs-dismiss="modal">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

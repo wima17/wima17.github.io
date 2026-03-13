@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Sitio oficial de los Tigres del Licey, el equipo más ganador del béisbol dominicano. Noticias, historia, jugadores y más." />
+<meta name="keywords" content="Tigres del Licey, béisbol dominicano, LIDOM, Licey, tigres, béisbol, República Dominicana" />
+<meta name="author" content="Tigres del Licey" />
+<meta name="robots" content="index, follow" />
+<title>Tigres del Licey Orgullo Dominicano</title>
+
+<link rel="icon" type="image/png" href="img/tigresdelliceyicono-removebg-preview.png" />
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/styles.css" />
+
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+
+<!-- BARRA DE NAVEGACIÓN -->
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="img/tigresdelliceyicono-removebg-preview.png" alt="logo" width="90" class="me-2" />
+      <div>
+        <span class="nombre-marca">TIGRES DEL LICEY</span><br>
+        
+      </div>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <i class="bi bi-list" style="color:#fff;font-size:1.8rem;"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html"><i class="bi bi-house-fill me-1"></i>Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="noticias.html"><i class="bi bi-newspaper me-1"></i>Noticias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="enlaces.html"><i class="bi bi-play-circle me-1"></i>Multimedia</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.html"><i class="bi bi-envelope-fill me-1"></i>Contacto</a>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-outline-light btn-sm ms-lg-3" id="darkToggle" onclick="toggleDark()" title="Modo oscuro">
+            <i class="bi bi-moon-fill" id="darkIcon"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+  </div>
+
+  <div class="carousel-inner">
+
+    <!-- SLIDE 1 -->
+    <div class="carousel-item active">
+      <div class="diapositiva-carrusel slide-1">
+        <img src="img/tigresdelliceyicono-removebg-preview.png" alt="foto" class="slide-img">
+        <div class="slide-overlay"></div>
+        <div class="pie-carrusel-personalizado">
+          <p class="texto-superior-slide">Temporada 2024-2025</p>
+          <h1>CAMPEONES<br><span class="text-gold">DE LA REPÚBLICA</span></h1>
+          <a href="noticias.html" class="btn boton-dorado btn-lg mt-3">Ver Noticias <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="carousel-item">
+      <div class="diapositiva-carrusel slide-2">
+        <img src="img/campeonates.jpg" alt="trofeos" class="slide-img">
+        <div class="slide-overlay"></div>
+        <div class="pie-carrusel-personalizado">
+          <p class="texto-superior-slide">Orgullo Azul</p>
+          <h1>24 TÍTULOS<br><span class="text-gold">NACIONALES</span></h1>
+          <button class="btn boton-dorado btn-lg mt-3" onclick="showHistoria()">Nuestra Historia <i class="bi bi-trophy-fill"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="carousel-item">
+      <div class="diapositiva-carrusel slide-3">
+        <img src="img/anillo.jpg" alt="Sangre Azul en las Venas" class="slide-img"> 
+        <div class="slide-overlay"></div> 
+        <div class="pie-carrusel-personalizado">
+          <p class="texto-superior-slide">La Fiera Azul</p>
+          <h1>SANGRE AZUL<br><span class="text-gold">EN LAS VENAS</span></h1>
+          <a href="contacto.html" class="btn boton-dorado btn-lg mt-3">Únete <i class="bi bi-person-plus-fill"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <i class="bi bi-chevron-left icono-control-carrusel"></i>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    <i class="bi bi-chevron-right icono-control-carrusel"></i>
+  </button>
+
+</div>
+
+
+<!-- ESLOGAN -->
+<section class="seccion-eslogan text-center py-5">
+  <div class="container">
+    <div class="insignia-eslogan">
+      <span class="texto-eslogan">"AZUL POR SIEMPRE, TIGRES PARA SIEMPRE"</span>
+    </div>
+    <p class="subtexto-eslogan mt-3">Desde 1907 defendiendo los colores del béisbol dominicano</p>
+  </div>
+</section>
+
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="container py-5">
+
+  <!-- Historia -->
+  <section class="mb-5">
+    <div class="row align-items-center g-5">
+
+      <div class="col-lg-6">
+        <span class="etiqueta-seccion">Historia</span>
+        <h2 class="titulo-seccion">El Equipo Más Ganador</h2>
+        <p>Los <strong>Tigres del Licey</strong> son un equipo de béisbol profesional de la República Dominicana, fundado en <strong>1907</strong> en la ciudad de Santo Domingo. Son el equipo con más títulos en la <em>Liga de Béisbol Profesional de la República Dominicana (LIDOM)</em>.</p>
+        <p>Con sus icónicos colores <strong>azul y blanco</strong>, los Tigres han forjado una identidad inigualable en el deporte nacional. Su estadio, el <strong>Estadio Quisqueya Juan Marichal</strong>, es la casa de la fanaticada más apasionada del Caribe.</p>
+        <p>A lo largo de más de un siglo de historia, el Licey ha producido decenas de grandes ligas y continúa siendo un semillero de talento beisbolístico para el mundo.</p>
+        <a href="noticias.html" class="btn boton-primario-licey mt-2">Leer más <i class="bi bi-arrow-right-circle"></i></a>
+      </div>
+
+      <div class="col-lg-6">
+        
+        <div class="imagen-placeholder-historia">
+          <div>
+          <img src="img/liceycampeon.jpg" alt="los mejores" class="img-fluid imagen-licey w-100">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Estadísticas -->
+  <section class="mb-5">
+    <div class="cuadricula-estadisticas">
+      <div class="tarjeta-estadistica tarjeta-hover">
+        <i class="bi bi-trophy-fill icono-estadistica"></i>
+        <div class="numero-estadistica">24</div>
+        <div class="etiqueta-estadistica">Títulos Nacionales</div>
+      </div>
+      <div class="tarjeta-estadistica tarjeta-hover">
+        <i class="bi bi-star-fill icono-estadistica"></i>
+        <div class="numero-estadistica">11</div>
+        <div class="etiqueta-estadistica">Series del Caribe</div>
+      </div>
+      <div class="tarjeta-estadistica tarjeta-hover">
+        <i class="bi bi-calendar-fill icono-estadistica"></i>
+        <div class="numero-estadistica">1907</div>
+        <div class="etiqueta-estadistica">Año de Fundación</div>
+      </div>
+      <div class="tarjeta-estadistica tarjeta-hover">
+        <i class="bi bi-people-fill icono-estadistica"></i>
+        <div class="numero-estadistica">100+</div>
+        <div class="etiqueta-estadistica">Grandes Ligas</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Campeonatos y Valores -->
+  <section class="mb-5">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="tarjeta-lista">
+          <h3 class="titulo-tarjeta-lista">
+            <i class="bi bi-list-ol me-2" style="color:#C9A800;"></i>Principales Campeonatos
+          </h3>
+          <ol class="lista-ordenada-personalizada">
+            <li>Campeón LIDOM Temporada 2024-2025</li>
+            <li>Serie del Caribe 2010  Cancún, México</li>
+            <li>Campeón LIDOM Temporada 2009-2010</li>
+            <li>Serie del Caribe 2000  Santo Domingo</li>
+            <li>Campeón LIDOM Temporada 1999-2000</li>
+            <li>Serie del Caribe 1994 Puerto Rico</li>
+            <li>Primer campeonato LIDOM  1951</li>
+          </ol>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="tarjeta-lista">
+          <h3 class="titulo-tarjeta-lista">
+            <i class="bi bi-check2-circle me-2" style="color:#C9A800;"></i>Valores del Club
+          </h3>
+          <ul class="lista-desordenada-personalizada">
+            <li>Pasión por el béisbol dominicano</li>
+            <li>Compromiso con la excelencia deportiva</li>
+            <li>Respeto a los fanáticos y la comunidad</li>
+            <li>Desarrollo de jóvenes talentos</li>
+            <li>Orgullo de la identidad nacional</li>
+            <li>Trabajo en equipo y solidaridad</li>
+            <li>Transparencia y profesionalismo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Jugadores -->
+  <section class="mb-5">
+    <span class="etiqueta-seccion">Leyendas de la lidom</span>
+    <h2 class="titulo-seccion">Jugadores Inmortales</h2>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3">
+        <div class="tarjeta-jugador tarjeta-hover">
+          <div class="numero-jugador">45</div>
+          <h5>Pedro Martínez</h5>
+          <img src="img/pedro martinez.jpg">
+          <p>Pitcher derecho. Miembro del Salón de la Fama de MLB.</p>
+          <span class="insignia-posicion">Pitcher</span>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="tarjeta-jugador tarjeta-hover">
+          <div class="numero-jugador">24</div>
+          <h5>Manny Ramírez</h5>
+          <img src="img/many ramirez.jpg">
+          <p>Jardinero derecho. Dos veces campeón de la Serie Mundial.</p>
+          <span class="insignia-posicion">Jardinero</span>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="tarjeta-jugador tarjeta-hover">
+          <div class="numero-jugador">27</div>
+          <h5>Juan Marichal</h5>
+          <img src="img/juan marichal.jpg">
+          <p>El Dandy Dominicano. Leyenda del béisbol latinoamericano.</p>
+          <span class="insignia-posicion">Pitcher</span>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="tarjeta-jugador tarjeta-hover">
+          <div class="numero-jugador">8</div>
+          <h5>César Gerónimo</h5>
+          <img src="img/cesar geronimo.jpg" width="150">
+          <p>Jardinero central con trayectoria en MLB y béisbol caribeño.</p>
+          <span class="insignia-posicion">Jardinero</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Galería -->
+  <section class="mb-5">
+    <span class="etiqueta-seccion">Galería</span>
+    <h2 class="titulo-seccion">Momentos Históricos</h2>
+    <p class="text-muted mb-4"></p>
+
+    <div class="cuadricula-galeria">
+      <div class="elemento-galeria">
+        <div class="marcador-galeria marcador-galeria-1">
+          <img src="img/estadio quisquella.jpg" alt="estadio">
+        </div>
+      </div>
+      <div class="elemento-galeria">
+        <div class="marcador-galeria marcador-galeria-2">
+          <img src="img/serie del caribe.jpeg"alt="caribe">
+        </div>
+      </div>
+      <div class="elemento-galeria">
+        <div class="marcador-galeria marcador-galeria-3">
+          <img src="img/celebracion en la calle.png" alt="calle">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Redes Sociales -->
+  <section class="seccion-social text-center py-5 mb-4">
+    <h3 class="mb-4">Síguenos en Redes Sociales</h3>
+    <div class="d-flex justify-content-center flex-wrap gap-3">
+      <a href="https://www.facebook.com/TigresDelLicey" target="_blank" class="boton-social facebook">
+        <i class="bi bi-facebook"></i> Facebook
+      </a>
+      <a href="https://twitter.com/LiceyOficial" target="_blank" class="boton-social twitter">
+        <i class="bi bi-twitter-x"></i> Twitter/X
+      </a>
+      <a href="https://www.instagram.com/tigresdellicey" target="_blank" class="boton-social instagram">
+        <i class="bi bi-instagram"></i> Instagram
+      </a>
+      <a href="https://www.youtube.com/@TigresDelLicey1" target="_blank" class="boton-social youtube">
+        <i class="bi bi-youtube"></i> YouTube
+      </a>
+      <a href="https://www.tiktok.com/@tigresdellicey" target="_blank" class="boton-social tiktok">
+        <i class="bi bi-tiktok"></i> TikTok
+      </a>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- PIE DE PÁGINA -->
+<footer class="pie-pagina">
+  <div class="container py-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="d-flex align-items-center gap-2 mb-3">
+          <img src="img/tigresdelliceyicono-removebg-preview.png" width="90">
+          <div>
+            <div class="marca-pie">TIGRES DEL LICEY</div>
+            <div class="desde-pie">Fundado en 1907</div>
+          </div>
+        </div>
+        <p class="descripcion-pie">El equipo más ganador del béisbol dominicano. LICEYYY CAMPEONNNN.</p>
+      </div>
+      <div class="col-md-4">
+        <h6 class="titulo-pie">Navegación</h6>
+        <ul class="enlaces-pie">
+          <li><a href="index.html"><i class="bi bi-chevron-right"></i> Inicio</a></li>
+          <li><a href="noticias.html"><i class="bi bi-chevron-right"></i> Noticias</a></li>
+          <li><a href="enlaces.html"><i class="bi bi-chevron-right"></i> Multimedia</a></li>
+          <li><a href="contacto.html"><i class="bi bi-chevron-right"></i> Contacto</a></li>
+          <li>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">
+              <i class="bi bi-chevron-right"></i> Políticas de Privacidad
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h6 class="titulo-pie">Contacto</h6>
+        <p class="descripcion-pie">
+          <i class="bi bi-geo-alt-fill me-1" style="color:#C9A800;"></i>
+          Estadio Quisqueya Juan Marichal<br>Santo Domingo, Rep. Dom.
+        </p>
+        <p class="descripcion-pie">
+          <i class="bi bi-telephone-fill me-1" style="color:#C9A800;"></i>+1 (829) 276-1893
+        </p>
+        <p class="descripcion-pie">
+          <i class="bi bi-envelope-fill me-1" style="color:#C9A800;"></i><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3d54535b527d49545a4f584e59585151545e5844135e5250">polancosanchezluismario@gmail.com</a>
+        </p>
+      </div>
+    </div>
+    <hr class="linea-pie" />
+    <div class="text-center derechos-pie">
+      &copy; 2025 Tigres del Licey &middot; Todos los derechos reservados
+      <span class="mx-2">|</span>
+      <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Políticas de Privacidad</a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- MODAL: Historia -->
+<div class="modal fade" id="historiaModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content modal-licey-es">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          <i class="bi bi-trophy-fill me-2" style="color:#FFD700;"></i>Historia de los Tigres del Licey
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <p>Los <strong>Tigres del Licey</strong> fueron fundados en <strong>1907</strong>, siendo el equipo de béisbol más antiguo y exitoso de la República Dominicana.</p>
+        <p>Con los colores <strong>azul y blanco</strong>, el equipo forjó una identidad inigualable. A lo largo de más de un siglo, ha ganado <strong>23 campeonatos nacionales</strong> y <strong>8 Series del Caribe</strong>.</p>
+        <p>El Estadio Quisqueya Juan Marichal, su hogar, es uno de los recintos más emblemáticos del béisbol caribeño.</p>
+        <div class="cita-licey-modal">"El Licey no es solo un equipo, es una religión en la República Dominicana."</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn boton-dorado" data-bs-dismiss="modal">¡Arriba Licey! &#x1F42F;</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Privacidad -->
+<div class="modal fade" id="privacyModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered">
+    <div class="modal-content modal-licey-es">
+      <div class="modal-header">
+        <h5 class="modal-title">
+          <i class="bi bi-shield-lock-fill me-2" style="color:#FFD700;"></i>Políticas de Privacidad
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <h6>1. Recopilación de Información</h6>
+        <p>Los Tigres del Licey recopilan información personal únicamente cuando el usuario la proporciona voluntariamente a través de formularios de contacto u otros medios del sitio web.</p>
+        <h6>2. Uso de la Información</h6>
+        <p>La información recopilada se utiliza exclusivamente para responder consultas, enviar comunicaciones oficiales del equipo y mejorar la experiencia del usuario en nuestro sitio web.</p>
+        <h6>3. Cookies</h6>
+        <p>Este sitio web utiliza cookies técnicas para garantizar su correcto funcionamiento. No se utilizan cookies de rastreo con fines comerciales sin consentimiento.</p>
+        <h6>4. Compartir Información</h6>
+        <p>Los Tigres del Licey no venden, alquilan ni comparten información personal con terceros sin consentimiento expreso del usuario, salvo obligación legal.</p>
+        <h6>5. Seguridad</h6>
+        <p>Implementamos medidas de seguridad técnicas y organizativas para proteger la información personal contra acceso no autorizado, pérdida o destrucción.</p>
+        <h6>6. Derechos del Usuario</h6>
+        <p>Los usuarios tienen derecho a acceder, rectificar o eliminar sus datos personales contactándonos en <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c5b5b7acb3a4a6aca1a4a185b1aca2b7a0b6a1a0a9a9aca6a0bceba6aaa8">lp24-0910@unphu.edu.do</a></strong>.</p>
+        <h6>7. Cambios en la Política</h6>
+        <p>Nos reservamos el derecho de actualizar estas políticas. Los cambios serán notificados en este sitio web con al menos 30 días de anticipación.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button btn-gold" data-bs-dismiss="modal">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

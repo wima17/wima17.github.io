@@ -1,0 +1,225 @@
+
+.diapositiva-carrusel {
+  width: 100%;
+  height: 88vh;
+  min-height: 400px;
+  max-height: 550px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Imagen real dentro del slide — siempre llena el espacio igual */
+.diapositiva-carrusel .slide-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Overlay oscuro cuando hay imagen real para que el texto se lea bien */
+.diapositiva-carrusel .slide-img + .slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 30, 80, 0.58);
+  z-index: 1;
+}
+
+/* Fondos de gradiente para slides sin imagen */
+.slide-1 { background: linear-gradient(135deg, #001850 0%, #003087 55%, #004BB4 100%); }
+.slide-2 { background: linear-gradient(135deg, #0D0D1A 0%, #001850 55%, #002060 100%); }
+.slide-3 { background: linear-gradient(135deg, #002060 0%, #003087 55%, #1565C0 100%); }
+
+/* Decoración emoji de fondo */
+.decoracion-slide {
+  position: absolute;
+  font-size: 28vw;
+  opacity: 0.05;
+  right: -2vw;
+  bottom: -4vh;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+/* Contenido del slide siempre encima */
+.pie-carrusel-personalizado {
+  position: relative;
+  z-index: 2;
+  padding: 0 6vw;
+  max-width: 720px;
+}
+
+.texto-superior-slide {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #C9A800;
+  margin-bottom: 1rem;
+}
+
+.pie-carrusel-personalizado h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.05;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.55);
+  margin-bottom: 0.5rem;
+}
+
+.text-gold { color: #FFD700 !important; }
+
+.icono-control-carrusel {
+  font-size: 2.2rem;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ── SECCIÓN SLOGAN ── */
+.seccion-eslogan {
+  background: var(--card-bg);
+}
+
+.insignia-eslogan {
+  display: inline-block;
+  background: #003087;
+  padding: 1rem 2.8rem;
+  border-radius: 50px;
+  border: 2px solid #C9A800;
+  box-shadow: 0 4px 22px rgba(0, 48, 135, 0.25);
+}
+
+.texto-eslogan {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  color: #FFD700;
+  letter-spacing: 0.07em;
+}
+
+.subtexto-eslogan {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* ── GALERÍA - PLACEHOLDERS ── */
+
+/* Placeholder grande (sección historia) */
+.imagen-placeholder-historia {
+  background: linear-gradient(135deg, #003087, #004BB4);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+  height: 100%;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+}
+
+.imagen-placeholder-historia .icono-marcador {
+  font-size: 5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.imagen-placeholder-historia small {
+  font-size: 0.75rem;
+  display: block;
+  margin-top: 0.3rem;
+  opacity: 0.7;
+}
+
+/* Placeholders de galería (misma altura todos) */
+.cuadricula-galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.elemento-galeria {
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagen real dentro de la galería */
+.elemento-galeria img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.elemento-galeria:hover img {
+  transform: scale(1.05);
+}
+
+/* Placeholder cuando no hay imagen en galería */
+.marcador-galeria {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.65);
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem;
+}
+
+.marcador-galeria .icono-marcador {
+  font-size: 3rem;
+  margin-bottom: 0.4rem;
+}
+
+.marcador-galeria-1 { background: linear-gradient(135deg, #003087, #004BB4); }
+.marcador-galeria-2 { background: linear-gradient(135deg, #001850, #002d7a); }
+.marcador-galeria-3 { background: linear-gradient(135deg, #002060, #0050cc); }
+
+/* ── SECCIÓN SOCIAL ── */
+.seccion-social {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .diapositiva-carrusel {
+    height: 70vh;
+    min-height: 420px;
+  }
+
+  .cuadricula-galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .elemento-galeria {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 576px) {
+  .diapositiva-carrusel {
+    height: 60vh;
+    min-height: 380px;
+  }
+
+  .insignia-eslogan {
+    padding: 0.8rem 1.5rem;
+  }
+}
